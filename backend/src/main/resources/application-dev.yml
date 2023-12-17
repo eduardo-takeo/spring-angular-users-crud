@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/crud-db
+    url: jdbc:postgresql://localhost:5432/crud-db
     username: admin
     password: 1234
   jpa:
       properties:
           hibernate:
-              dialect: org.hibernate.dialect.MySQLDialect
+              dialect: org.hibernate.dialect.PostgreSQLDialect
 logging:
   level:
     org:
