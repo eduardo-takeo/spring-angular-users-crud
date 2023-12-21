@@ -9,6 +9,7 @@ import { ITableColumn } from '../../models/table.model';
 export class TableComponent {
   @Input() columns: ITableColumn[];
   @Input() data: any[];
+  @Input() onRowClick: () => void;
 
   constructor() {}
 

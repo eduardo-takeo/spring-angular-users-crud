@@ -16,6 +16,15 @@
   }
 }
 
+.row {
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #e7e7e7;
+  }
+}
+
 .empty-table {
   margin: 1rem 0.8rem;
 }

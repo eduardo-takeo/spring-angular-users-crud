@@ -1,6 +1,10 @@
 <main>
   <app-header title="Users"></app-header>
   <section class="main">
-    <app-table [data]="users" [columns]="columns"></app-table>
+    <app-table
+      [data]="users"
+      [columns]="columns"
+      [onRowClick]="editUser"
+    ></app-table>
   </section>
 </main>

@@ -32,4 +32,8 @@ export class UsersComponent {
       this.users = data;
     });
   }
+
+  editUser() {
+    console.log('Row clicked');
+  }
 }
