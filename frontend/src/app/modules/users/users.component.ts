@@ -8,6 +8,20 @@ import { IUser } from 'src/app/shared/models/user.model';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
+  columns: string[] = ['id', 'name', 'email'];
+  data: any[] = [
+    {
+      id: 1,
+      name: 'Leanne Graham',
+      email: 'blulbublublbulb',
+    },
+    {
+      id: 2,
+      name: 'Leanne Graham',
+      email: 'blablablabla',
+    },
+  ];
+
   constructor(private usersService: UsersService) {}
 
   ngOnInit() {
