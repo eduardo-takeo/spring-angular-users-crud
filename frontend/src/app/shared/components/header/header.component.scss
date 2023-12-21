@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+
+  & > li {
+    font-size: medium;
+  }
+}
