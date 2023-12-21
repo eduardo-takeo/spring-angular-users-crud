@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsersService } from 'src/app/core/services/users/users.service';
+import { ITableColumn } from 'src/app/shared/models/table.model';
 import { IUser } from 'src/app/shared/models/user.model';
 
 @Component({
@@ -8,25 +9,27 @@ import { IUser } from 'src/app/shared/models/user.model';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
-  columns: string[] = ['id', 'name', 'email'];
-  data: any[] = [
+  columns: ITableColumn[] = [
     {
-      id: 1,
-      name: 'Leanne Graham',
-      email: 'blulbublublbulb',
+      label: 'ID',
+      key: 'id',
     },
     {
-      id: 2,
-      name: 'Leanne Graham',
-      email: 'blablablabla',
+      label: 'Usuário',
+      key: 'username',
+    },
+    {
+      label: 'Grupo',
+      key: 'role',
     },
   ];
+  users: IUser[] = [];
 
   constructor(private usersService: UsersService) {}
 
   ngOnInit() {
     this.usersService.getUsers().subscribe((data: IUser[]) => {
-      console.log(data);
+      this.users = data;
     });
   }
 }

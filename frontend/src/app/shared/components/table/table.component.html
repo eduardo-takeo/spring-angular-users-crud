@@ -1,12 +1,16 @@
 <table class="custom-table">
   <thead>
     <tr>
-      <th *ngFor="let column of columns">{{ column }}</th>
+      <th *ngFor="let column of columns">{{ column.label }}</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="data.length; then table_results; else no_results"></tbody>
+  <ng-template #table_results>
     <tr *ngFor="let item of data">
-      <td *ngFor="let column of columns">{{ item[column] }}</td>
+      <td *ngFor="let column of columns">{{ item[column.key] }}</td>
     </tr>
-  </tbody>
+  </ng-template>
+  <ng-template #no_results
+    ><p class="empty-table">Nenhum resultado encontrado</p></ng-template
+  >
 </table>

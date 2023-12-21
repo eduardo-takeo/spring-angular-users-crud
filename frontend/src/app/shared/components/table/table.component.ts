@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ITableColumn } from '../../models/table.model';
 
 @Component({
   selector: 'app-table',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
-  @Input() columns: string[];
+  @Input() columns: ITableColumn[];
   @Input() data: any[];
 
   constructor() {}
