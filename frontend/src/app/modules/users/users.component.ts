@@ -34,6 +34,10 @@ export class UsersComponent {
   }
 
   editUser() {
-    console.log('Row clicked');
+    console.log('Edit user clicked');
+  }
+
+  createUser() {
+    console.log("Create user clicked")
   }
 }
