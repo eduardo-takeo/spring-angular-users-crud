@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ITableColumn } from '../../models/table.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-table',
@@ -9,9 +10,7 @@ import { ITableColumn } from '../../models/table.model';
 export class TableComponent {
   @Input() columns: ITableColumn[];
   @Input() data: any[];
-  @Input() onRowClick: () => void;
+  @Input() onRowClick: (selectedItem: any) => void;
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(private router: Router) {}
 }
